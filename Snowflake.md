@@ -6,7 +6,7 @@ The title of the section in the dbt tutorial is listed below with alternate inst
 
 ## Alternate Steps
 
-### Create a BigQuery Project - Alternate Step: Log Into Your Snowflake Account
+### Create a BigQuery Project - Alternate Step: Create a Database, Schema, and Tables in Snowflake
 
 Snowflake provides a Cloud Data Warehouse delivered as a service and therefore requires an account. If you have access to a Snowflake account, simply log in and follow the instructions below. You can obtain a Snowflake trial account [here](https:trial.snowflake.com).
 
