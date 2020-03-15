@@ -10,7 +10,7 @@ The title of the section in the dbt tutorial is listed below with alternate inst
 
 Snowflake provides a Cloud Data Warehouse delivered as a service and therefore requires an account. If you have access to a Snowflake account, simply log in and follow the instructions below. You can obtain a Snowflake trial account [here](https:trial.snowflake.com).
 
-### Create a database, schema and tables for the dbt tutorial
+#### Create a database, schema and tables for the dbt tutorial
 
 Once logged into your Snowflake account:
 - select _Worksheets_ in the ribbon. You can either copy the contents of [snowflake-dml.sql](/Snowflake/snowflake-dml.sql) and paste it into a worksheet in the Snowflake UI, or click the down arrow next to the new worksheet *+* sign, select _Load Script_, and open `snowflake-dml.sql`.
