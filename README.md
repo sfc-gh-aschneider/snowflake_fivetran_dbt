@@ -4,7 +4,7 @@ This repository was forked from the original `jaffle_shop` repository and contai
 
 The [Snowflake](/Snowflake) directory contains scripts to prepare a Snowflake database.
 
-The [Snowflake.md](Snowflake.md) file contains the alternate instructions to perform the tutorial tasks against Snowflake. 
+[Snowflake.md](Snowflake.md) contains the alternate instructions to perform the tutorial tasks against Snowflake. 
 
 
 ## dbt models for `jaffle_shop`
