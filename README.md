@@ -1,6 +1,10 @@
 ## dbt tutorial for Snowflake
 
-This repository was forked from the original `jaffle_shop` repository and contains a modified version of configuration files and code to run the totorial against [Snowflake](https://www.snowflake.com).
+This repository was forked from the original `jaffle_shop` repository and contains a modified version of configuration files and code to run the dbt tutorial against [Snowflake](https://www.snowflake.com).
+
+The [Snowflake](/Snowflake) directory contains scripts to prepare a Snowflake database.
+
+The [Snowflake.md](Snowflake.md) file contains the alternate instructions to perform the tutorial tasks against Snowflake. 
 
 
 ## dbt models for `jaffle_shop`
