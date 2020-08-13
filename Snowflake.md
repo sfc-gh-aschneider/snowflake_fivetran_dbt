@@ -13,9 +13,10 @@ Snowflake provides a Cloud Data Warehouse delivered as a service and therefore r
 #### Create a database, schema and tables for the dbt tutorial
 
 Once logged into your Snowflake account:
-- select _Worksheets_ in the ribbon. You can either copy the contents of [snowflake-dml.sql](/Snowflake/snowflake-dml.sql) and paste it into a worksheet in the Snowflake UI, or click the down arrow next to the new worksheet *+* sign, select _Load Script_, and open `snowflake-dml.sql`.
+- select _Worksheets_ in the ribbon. You can either copy the contents of [dml_snowflake.sql](/Snowflake/dml_snowflake.sql) and paste it into a worksheet in the Snowflake UI, or click the down arrow next to the new worksheet *+* sign, select _Load Script_, and open `dml_snowflake.sql`.
 
-- Run all commands in the script. The script assumes you have a warehouse named _load_wh_ already created.
+The script follows best practices for [using dbt with Snowflake](https://community.snowflake.com/s/article/Use-Case-How-We-Configure-Snowflake-at-Fishtown-Analytics) from the makers of dbt, [Fishtown Analytics](https://fishtownanalytics.com).
 
+- Run all commands in the script. If you are unable to use the accountadmin role to create new users and roles, you can simply create the raw tables and adjust the configuration script accordingly.
 
 

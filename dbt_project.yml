@@ -15,7 +15,7 @@ clean-targets:
     - "logs"
 
 models:
-  jaffle_shop:
+  jaffle_shop: 
       materialized: table
       staging:
         materialized: view

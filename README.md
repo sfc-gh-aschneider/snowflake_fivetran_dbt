@@ -5,10 +5,10 @@ This repository was forked from the original `jaffle_shop` repository and contai
 The [Snowflake](/Snowflake) directory contains scripts to prepare a Snowflake database.  
 [Snowflake.md](Snowflake.md) contains the alternate instructions to perform the tutorial tasks against Snowflake.
 
-It is highly recommended that you have working knowledge of Snowflake and a Snowflake account.  
+You will need a Snowflake account and it is highly recommended that you have working knowledge of Snowflake.  
 
 You can get a Snowflake trial account [here](https://trial.snowflake.com).  
-You can access [Tutorials, Videos, and Other Resource](https://docs.snowflake.com/en/other-resources.html) for Snowflake [here](https://docs.snowflake.com/en/other-resources.html).
+You can access Snowflake [Tutorials, Videos, and Other Resource](https://docs.snowflake.com/en/other-resources.html) [here](https://docs.snowflake.com/en/other-resources.html).
 
 
 ## dbt models for `jaffle_shop`
