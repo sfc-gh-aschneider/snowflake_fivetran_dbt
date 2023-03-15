@@ -1,85 +1,130 @@
 version: 2
 
 models:
-  - name: dim_customers
-    description: This table has basic information about a customer, as well as some derived facts based on a customer's orders
-
+  - name: google_ads_click_performance
+    description: The Click Performance report includes stats aggregated at each click level.
     columns:
-      - name: customer_id
-        description: This is a unique identifier for a customer
+      - name: _fivetran_id
+        description: "{{ doc('_fivetran_id') }}"
+      - name: _fivetran_synced
+        description: "{{ doc('_fivetran_synced') }}"
+      - name: account_name
+        description: "{{ doc('account_descriptive_name') }}"
+      - name: ad_group_id
+        description: "{{ doc('ad_group_id') }}"
+      - name: ad_group_name
+        description: "{{ doc('ad_group_name') }}"
+      - name: ad_group_status
+        description: "{{ doc('ad_group_status') }}"
+      - name: campaign_id
+        description: "{{ doc('campaign_id') }}"
+      - name: campaign_name
+        description: "{{ doc('campaign_name') }}"
+      - name: campaign_status
+        description: "{{ doc('campaign_status') }}"
+      - name: clicks
+        description: "{{ doc('clicks') }}"
+      - name: criteria_id
+        description: "{{ doc('criteria_id') }}"
+      - name: date_day
+        description: "{{ doc('date') }}"
+      - name: external_customer_id
+        description: "{{ doc('external_customer_id') }}"
+      - name: gclid
+        tests:
+          - not_null
+        description: "{{ doc('gcl_id') }}"
+
+  - name: google_ads_criteria_performance
+    description: The Criteria Performance report includes statistics aggregated at the ad group criteria level, one row per ad group and criteria combination.
+    columns:
+      - name: _fivetran_id
+        description: "{{ doc('_fivetran_id') }}"
+      - name: _fivetran_synced
+        description: "{{ doc('_fivetran_synced') }}"
+      - name: account_name
+        description: "{{ doc('account_descriptive_name') }}"
+      - name: ad_group_id
+        description: "{{ doc('ad_group_id') }}"
+      - name: ad_group_name
+        description: "{{ doc('ad_group_name') }}"
+      - name: ad_group_status
+        description: "{{ doc('ad_group_status') }}"
+      - name: campaign_id
+        description: "{{ doc('campaign_id') }}"
+      - name: campaign_name
+        description: "{{ doc('campaign_name') }}"
+      - name: campaign_status
+        description: "{{ doc('campaign_status') }}"
+      - name: clicks
+        description: "{{ doc('clicks') }}"
+      - name: spend
+        description: "{{ doc('cost') }}"
+      - name: criteria
+        description: "{{ doc('criteria') }}"
+      - name: criteria_destination_url
+        description: "{{ doc('criteria_destination_url') }}"
+      - name: criteria_type
+        description: "{{ doc('criteria_type') }}"
+      - name: date_day
+        description: "{{ doc('date') }}"
+      - name: external_customer_id
+        description: "{{ doc('external_customer_id') }}"
+      - name: id
+        description: ID of the main object of this row.
+      - name: impressions
+        description: "{{ doc('impressions') }}"
+
+  - name: google_ads_final_url_performance
+    description:  Each record represents the performance of a final url at the ad group level.
+    columns:
+      - name: final_url_performance_id
         tests:
           - unique
           - not_null
-
-      - name: first_name
-        description: Customer's first name. PII.
-
-      - name: last_name
-        description: Customer's last name. PII.
-
-      - name: email
-        description: Customer's email address. PII.
-
-      - name: first_order
-        description: Date (UTC) of a customer's first order
-
-      - name: most_recent_order
-        description: Date (UTC) of a customer's most recent order
-
-      - name: number_of_orders
-        description: Count of the number of orders a customer has placed
-
-      - name: total_order_amount
-        description: Total value (AUD) of a customer's orders
-
-  - name: fct_orders
-    description: This table has basic information about orders, as well as some derived facts based on payments
-
-    columns:
-      - name: order_id
-        tests:
-          - unique
-          - not_null
-        description: This is a unique identifier for an order
-
-      - name: customer_id
-        description: Foreign key to the customers table
-        tests:
-          - not_null
-          - relationships:
-              to: ref('dim_customers')
-              field: customer_id
-
-      - name: order_date
-        description: Date (UTC) that the order was placed
-
-      - name: status
-        description: '{{ doc("orders_status") }}'
-        tests:
-          - accepted_values:
-              values: ['placed', 'shipped', 'completed', 'return_pending', 'returned']
-
-      - name: amount
-        description: Total amount (AUD) of the order
-        tests:
-          - not_null
-
-      - name: credit_card_amount
-        description: Amount of the order (AUD) paid for by credit card
-        tests:
-          - not_null
-
-      - name: coupon_amount
-        description: Amount of the order (AUD) paid for by coupon
-        tests:
-          - not_null
-
-      - name: bank_transfer_amount
-        description: Amount of the order (AUD) paid for by bank transfer
-        tests:
-          - not_null
-
-      - name: gift_card_amount
-        description: Amount of the order (AUD) paid for by gift card
-        tests:
-          - not_null
+      - name: _fivetran_id
+        description: "{{ doc('_fivetran_id') }}"
+      - name: _fivetran_synced
+        description: "{{ doc('_fivetran_synced') }}"
+      - name: account_name
+        description: "{{ doc('account_descriptive_name') }}"
+      - name: ad_group_id
+        description: "{{ doc('ad_group_id') }}"
+      - name: ad_group_name
+        description: "{{ doc('ad_group_name') }}"
+      - name: ad_group_status
+        description: "{{ doc('ad_group_status') }}"
+      - name: campaign_id
+        description: "{{ doc('campaign_id') }}"
+      - name: campaign_name
+        description: "{{ doc('campaign_name') }}"
+      - name: campaign_status
+        description: "{{ doc('campaign_status') }}"
+      - name: clicks
+        description: "{{ doc('clicks') }}"
+      - name: spend
+        description: "{{ doc('cost') }}"
+      - name: date_day
+        description: "{{ doc('date') }}"
+      - name: final_url
+        description: "{{ doc('effective_final_url') }}"
+      - name: external_customer_id
+        description: "{{ doc('external_customer_id') }}"
+      - name: impressions
+        description: "{{ doc('impressions') }}"
+      - name: base_url
+        description: "{{ doc('base_url') }}"
+      - name: url_host
+        description: "{{ doc('url_host') }}"
+      - name: url_path
+        description: "{{ doc('url_path') }}"
+      - name: utm_source
+        description: "{{ doc('utm_source') }}"
+      - name: utm_medium
+        description: "{{ doc('utm_medium') }}"
+      - name: utm_campaign
+        description: "{{ doc('utm_campaign') }}"
+      - name: utm_content
+        description: "{{ doc('utm_content') }}"
+      - name: utm_term
+        description: "{{ doc('utm_term') }}"

@@ -13,7 +13,10 @@ clean-targets:
     - "target"
     - "dbt_modules"
     - "logs"
-
+vars:
+  google_ads_schema: google_ads_demo
+  google_ads_database: pc_fivetran_db
+  
 models:
   google_ads_demo: 
       materialized: table
