@@ -1,6 +1,7 @@
 
 name: 'google_ads_demo'
 version: '0.1'
+config-version: 2
 profile: 'google_ads_demo'
 source-paths: ["models"]
 analysis-paths: ["analysis"]
