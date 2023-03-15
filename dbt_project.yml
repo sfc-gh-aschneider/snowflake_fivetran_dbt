@@ -1,7 +1,7 @@
 
-name: 'jaffle_shop'
+name: 'google_ads_demo'
 version: '0.1'
-profile: 'jaffle_shop'
+profile: 'google_ads_demo'
 source-paths: ["models"]
 analysis-paths: ["analysis"]
 test-paths: ["tests"]
@@ -15,7 +15,7 @@ clean-targets:
     - "logs"
 
 models:
-  jaffle_shop: 
+  google_ads_demo: 
       materialized: table
       staging:
         materialized: view
