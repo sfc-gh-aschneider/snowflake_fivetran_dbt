@@ -1,6 +1,7 @@
 
 name: 'google_ads_demo'
 version: '0.1'
+config-version: 2
 profile: 'google_ads_demo'
 source-paths: ["models"]
 analysis-paths: ["analysis"]
@@ -16,7 +17,7 @@ clean-targets:
 vars:
   google_ads_schema: google_ads_demo
   google_ads_database: pc_fivetran_db
-  
+
 models:
   google_ads_demo: 
       materialized: table
